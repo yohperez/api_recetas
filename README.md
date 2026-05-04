@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # SaborScript API 🍳
 
 API REST para gestión de recetas construida con FastAPI y PostgreSQL.
@@ -9,3 +10,6 @@ API REST para gestión de recetas construida con FastAPI y PostgreSQL.
 4. Crear archivo `.env` basado en `.env.example`.
 5. Ejecutar: `uvicorn app.main:app --reload`
 
+=======
+# api_recetas
+>>>>>>> bba84189f0e0ba2dde83c251516ec4f6bbf53e2b
