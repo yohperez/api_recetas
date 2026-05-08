@@ -12,7 +12,23 @@ Este proyecto corresponde a la asignatura de **desarrollo de un motor de persist
 
 ## 📂 Estructura del proyecto
 
+## 📂 Estructura del proyecto
 
+api_recetas/
+├── app/
+|   ├── main.py            # Instancia FastAPI + montaje de routers
+|   ├── database.py        # Conexión a la base de datos (engine, SessionLocal, Base)
+|   ├── models.py          # Modelos SQLAlchemy (Recipe, Category)
+|   ├── schemas.py         # Modelos Pydantic (RecipeCreate, RecipeUpdate, etc.)
+|   ├── crud.py            # Funciones CRUD (create_recipe, get_recipes, etc.)
+|   └── routers/
+|       └── recipes.py     # Rutas FastAPI de recetas
+├── .env.example           # Ejemplo de variables de entorno
+├── .gitignore
+├── README.md
+├── requirements.txt       # Dependencias Python
+├── Dockerfile             # Docker para la API
+└── docker-compose.yml     # Levanta backend + PostgreSQL
 
 api_recetas/
 ├── app/
