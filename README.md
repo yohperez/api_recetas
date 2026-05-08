@@ -12,6 +12,8 @@ Este proyecto corresponde a la asignatura de **desarrollo de un motor de persist
 
 ## 📂 Estructura del proyecto
 
+
+
 api_recetas/
 ├── app/
 |   ├── main.py            # Instancia FastAPI + montaje de routers
