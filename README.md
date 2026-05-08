@@ -28,7 +28,8 @@ api_recetas/
 ├── README.md
 ├── requirements.txt
 ├── Dockerfile
-└── docker-compose.yml text```
+└── docker-compose.yml 
+'''`
 
 =======
 
