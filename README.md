@@ -11,21 +11,22 @@ Este proyecto corresponde a la asignatura de **desarrollo de un motor de persist
 - Utilizar **Docker** para contenerizar la API y la base de datos (nivel experto).
 
 ## 📂 Estructura del proyecto
-`api_recetas/
+api_recetas/
 ├── app/
-| ├── main.py # Instancia FastAPI + montaje de routers
-| ├── database.py # Conexión a la base de datos (engine, SessionLocal, Base)
-| ├── models.py # Modelos SQLAlchemy (Recipe, Category)
-| ├── schemas.py # Modelos Pydantic (RecipeCreate, RecipeUpdate, etc.)
-| ├── crud.py # Funciones CRUD (create_recipe, get_recipes, etc.)
-| └── routers/
-| └── recipes.py # Rutas FastAPI de recetas
-├── .env.example # Ejemplo de variables de entorno
+│   ├── __init__.py
+│   ├── crud.py
+│   ├── database.py
+│   ├── main.py
+│   ├── models.py
+│   ├── schemas.py
+│   └── routers/
+│       ├── __init__.py
+│       └── recipes.py
+├── .env.example
 ├── .gitignore
 ├── README.md
-├── requirements.txt # Dependencias Python
-├── Dockerfile # Docker para la API
-└── docker-compose.yml # Levanta backend + PostgreSQL`
+├── database.py
+└── requirements.txt
 
 =======
 
