@@ -11,8 +11,7 @@ Este proyecto corresponde a la asignatura de **desarrollo de un motor de persist
 - Utilizar **Docker** para contenerizar la API y la base de datos (nivel experto).
 
 ## 📂 Estructura del proyecto
-`
-api_recetas/
+`api_recetas/
 ├── app/
 | ├── main.py # Instancia FastAPI + montaje de routers
 | ├── database.py # Conexión a la base de datos (engine, SessionLocal, Base)
