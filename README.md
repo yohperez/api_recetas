@@ -11,22 +11,24 @@ Este proyecto corresponde a la asignatura de **desarrollo de un motor de persist
 - Utilizar **Docker** para contenerizar la API y la base de datos (nivel experto).
 
 ## 📂 Estructura del proyecto
-api_recetas/
-├── app/
-│   ├── __init__.py
-│   ├── crud.py
-│   ├── database.py
-│   ├── main.py
-│   ├── models.py
-│   ├── schemas.py
-│   └── routers/
-│       ├── __init__.py
-│       └── recipes.py
-├── .env.example
-├── .gitignore
-├── README.md
-├── database.py
-└── requirements.txt
+
+
+`api_recetas/
+├── .env.example          # Plantilla para variables de entorno
+├── .gitignore            # Archivos ignorados por Git
+├── README.md             # Documentación del proyecto
+├── database.py           # Configuración base de la DB (raíz)
+├── requirements.txt      # Dependencias del proyecto
+└── app/                  # Carpeta principal de la aplicación
+    ├── __init__.py       # Inicializador del paquete
+    ├── crud.py           # Funciones de base de datos (Create, Read, Update, Delete)
+    ├── database.py       # Configuración de sesión y motor de DB
+    ├── main.py           # Punto de entrada de la API (FastAPI/Flask)
+    ├── models.py         # Definición de las tablas (SQLAlchemy)
+    ├── schemas.py        # Esquemas de validación de datos (Pydantic)
+    └── routers/          # Módulos de rutas/endpoints
+        ├── __init__.py
+        └── recipes.py    # Rutas específicas para la gestión de recetas`
 
 =======
 
