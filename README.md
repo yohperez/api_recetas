@@ -10,27 +10,26 @@ Este proyecto corresponde a la asignatura de **desarrollo de un motor de persist
 - Incluir **filtros de búsqueda** (por categoría) y documentación automática con Swagger.
 - Utilizar **Docker** para contenerizar la API y la base de datos (nivel experto).
 
-## 📁 Estructura del proyecto
+## 📂 Estructura del proyecto
 
 api_recetas/
-├── .env.example
+├── app/
+|   ├── main.py            # Instancia FastAPI + montaje de routers
+|   ├── database.py        # Conexión a la base de datos (engine, SessionLocal, Base)
+|   ├── models.py          # Modelos SQLAlchemy (Recipe, Category)
+|   ├── schemas.py         # Modelos Pydantic (RecipeCreate, RecipeUpdate, etc.)
+|   ├── crud.py            # Funciones CRUD (create_recipe, get_recipes, etc.)
+|   └── routers/
+|       └── recipes.py     # Rutas FastAPI de recetas
+├── .env.example           # Ejemplo de variables de entorno
 ├── .gitignore
 ├── README.md
-├── requirements.txt
-└── app/
-    ├── __init__.py
-    ├── crud.py
-    ├── database.py
-    ├── main.py
-    ├── models.py
-    ├── schemas.py
-    └── routers/
-        ├── __init__.py
-        └── recipes.py
+├── requirements.txt       # Dependencias Python
+├── Dockerfile             # Docker para la API
+└── docker-compose.yml     # Levanta backend + PostgreSQL
 
 
-<<<<<<< 
-# SaborScript API 🍳
+=======
 
 API REST para gestión de recetas construida con FastAPI y PostgreSQL.
 
