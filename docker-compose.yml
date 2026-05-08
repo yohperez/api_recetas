@@ -1,0 +1,61 @@
+# docker-compose.yml
+
+version: "3.8"
+
+services:
+  # ==================== BACKEND (FastAPI + uvicorn) ====================
+  backend:
+    # Construye la imagen desde el Dockerfile de la raíz
+    build: .
+    # Nombre del contenedor
+    container_name: api_recetas_backend
+    # Mapea el puerto 8000 del contenedor al 8000 del host
+    ports:
+      - "8000:8000"
+    # Vincula variables de entorno desde .env (necesario para DATABASE_URL)
+    env_file:
+      - .env
+    # Espera a que la base de datos esté lista antes de iniciar el backend
+    depends_on:
+      db:
+        condition: service_healthy
+    # Red compartida con la base de datos
+    networks:
+      - api_network
+
+  # ==================== BASE DE DATOS (PostgreSQL) ====================
+  db:
+    # Imagen oficial de PostgreSQL 15
+    image: postgres:15
+    # Nombre del contenedor
+    container_name: api_recetas_db
+    # Mapea el puerto 5432 del contenedor al 5432 del host (opcional; para debug)
+    ports:
+      - "5432:5432"
+    # Variables de entorno críticas
+    environment:
+      POSTGRES_DB: recetas_db
+      POSTGRES_USER: recetas_user
+      POSTGRES_PASSWORD: recetas_password
+    # Volúmenes para que los datos de la DB persistan entre reinicios
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    # Healthcheck: asegura que la DB esté lista para conexiones
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U recetas_user -d recetas_db"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    # Mismo network que el backend
+    networks:
+      - api_network
+    # Endpoint interno desde el backend -> 'db'
+
+# Define la red interna
+networks:
+  api_network:
+    driver: bridge
+
+# Volúmenes persistentes para PostgreSQL
+volumes:
+  postgres_data:
