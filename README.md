@@ -1,4 +1,35 @@
-<<<<<<< HEAD
+# SaborScript API 🍳
+
+API REST para la gestión de recetas de cocina, desarrollada con FastAPI, SQLAlchemy y PostgreSQL (vía Docker).  
+Este proyecto corresponde a la asignatura de **desarrollo de un motor de persistencia (backend)**, siguiendo el briefing de proyecto individual.
+
+## 🎯 Objetivo del proyecto
+
+- Implementar un **CRUD completo** de recetas (POST, GET, PUT, DELETE) con persistencia en base de datos.
+- Añadir una **relación 1:N** entre `Category` y `Recipe`.
+- Incluir **filtros de búsqueda** (por categoría) y documentación automática con Swagger.
+- Utilizar **Docker** para contenerizar la API y la base de datos (nivel experto).
+
+## 📁 Estructura del proyecto
+
+api_recetas/
+├── .env.example
+├── .gitignore
+├── README.md
+├── requirements.txt
+└── app/
+    ├── __init__.py
+    ├── crud.py
+    ├── database.py
+    ├── main.py
+    ├── models.py
+    ├── schemas.py
+    └── routers/
+        ├── __init__.py
+        └── recipes.py
+
+
+<<<<<<< 
 # SaborScript API 🍳
 
 API REST para gestión de recetas construida con FastAPI y PostgreSQL.
@@ -12,4 +43,6 @@ API REST para gestión de recetas construida con FastAPI y PostgreSQL.
 
 =======
 # api_recetas
->>>>>>> bba84189f0e0ba2dde83c251516ec4f6bbf53e2b
+>>>>>>>
+
+ bba84189f0e0ba2dde83c251516ec4f6bbf53e2b
