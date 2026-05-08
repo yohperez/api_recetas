@@ -29,7 +29,7 @@ api_recetas/
 ├── requirements.txt
 ├── Dockerfile
 └── docker-compose.yml 
-'''`
+```
 
 =======
 
